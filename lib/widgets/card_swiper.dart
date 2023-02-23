@@ -11,7 +11,7 @@ class CardSwiper extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
-    if (this.movies.length == 0) {
+    if ( movies.isEmpty) {
       return Container(
         width: double.infinity,
         height: size.height * 0.5,
@@ -33,7 +33,7 @@ class CardSwiper extends StatelessWidget {
 
           return GestureDetector(
             onTap: () => Navigator.pushNamed(context, 'Details',
-                arguments: 'movie-instace'),
+                arguments: movie),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: FadeInImage(

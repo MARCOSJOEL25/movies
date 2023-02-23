@@ -34,8 +34,16 @@ class Result {
   int voteCount;
 
   get fullpostimg {
-    if (this.posterPath != null) {
-      return 'https://image.tmdb.org/t/p/w500${this.posterPath}';
+    if (posterPath != null) {
+      return 'https://image.tmdb.org/t/p/w500$posterPath';
+    }
+
+    return 'https://i.stack.imgur.com/GNhxO.png';
+  }
+
+  get backPosting {
+    if (posterPath != null) {
+      return 'https://image.tmdb.org/t/p/w500$backdropPath';
     }
 
     return 'https://i.stack.imgur.com/GNhxO.png';

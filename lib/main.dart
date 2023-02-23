@@ -4,22 +4,26 @@ import 'package:movies/screens/screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(AppState());
+  runApp(const AppState());
 }
 
 class AppState extends StatelessWidget {
+  const AppState({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => MoviesProvider(), lazy: false,),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     );
   }
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +36,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'Home',
       routes: {
         'Home': (_) => HomeScreen(),
-        'Details': (_) => DetailsScreen(),
+        'Details': (_) => const DetailsScreen(),
       },
     );
   }

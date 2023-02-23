@@ -11,7 +11,6 @@ class CardSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
 
     return Container(
       width: double.infinity,
@@ -39,6 +38,7 @@ class CardSlider extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class _movieSlider extends StatelessWidget {
   final Result movie;
 
